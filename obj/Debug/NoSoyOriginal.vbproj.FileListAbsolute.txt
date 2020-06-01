@@ -1,0 +1,13 @@
+C:\Users\Wande\source\repos\NoSoyOriginal\bin\Debug\NoSoyOriginal.exe.config
+C:\Users\Wande\source\repos\NoSoyOriginal\bin\Debug\NoSoyOriginal.exe
+C:\Users\Wande\source\repos\NoSoyOriginal\bin\Debug\NoSoyOriginal.pdb
+C:\Users\Wande\source\repos\NoSoyOriginal\bin\Debug\NoSoyOriginal.xml
+C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.vbprojAssemblyReference.cache
+C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.Form_Menu.resources
+C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.Form_CreadorDePersonaje.resources
+C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.Resources.resources
+C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.vbproj.GenerateResource.cache
+C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.vbproj.CoreCompileInputs.cache
+C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.exe
+C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.xml
+C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.pdb
