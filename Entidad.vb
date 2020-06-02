@@ -103,7 +103,6 @@ Public MustInherit Class Entidad
 #Region "Constructores"
     Public Sub New()
         Nombre = ""
-        Genero = ""
         Fuerza = 0
         Destreza = 0
         Inteligencia = 0

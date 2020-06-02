@@ -1,7 +1,8 @@
 ﻿Public Class BonkeadorExperto
     Inherits Entidad
 
-    Sub New()
+    Public Sub New()
+        MyBase.New()
 
     End Sub
 

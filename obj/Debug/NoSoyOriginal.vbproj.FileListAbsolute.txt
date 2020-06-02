@@ -11,3 +11,5 @@ C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.vbproj.CoreCom
 C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.exe
 C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.xml
 C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.pdb
+C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.Form_Opciones.resources
+C:\Users\Wande\source\repos\NoSoyOriginal\obj\Debug\NoSoyOriginal.Principal.resources

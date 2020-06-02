@@ -24,8 +24,8 @@ Partial Class Form_Menu
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form_Menu))
         Me.LblTitulo = New System.Windows.Forms.Label()
-        Me.btnEmpezarPartida = New System.Windows.Forms.Button()
-        Me.btnCargarPartida = New System.Windows.Forms.Button()
+        Me.btnCrearPersonaje = New System.Windows.Forms.Button()
+        Me.btnIniciarPartida = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnCreditos = New System.Windows.Forms.Button()
         Me.btnOpciones = New System.Windows.Forms.Button()
@@ -45,23 +45,23 @@ Partial Class Form_Menu
         Me.LblTitulo.TabIndex = 0
         Me.LblTitulo.Text = "Bonk "
         '
-        'btnEmpezarPartida
+        'btnCrearPersonaje
         '
-        Me.btnEmpezarPartida.Location = New System.Drawing.Point(134, 210)
-        Me.btnEmpezarPartida.Name = "btnEmpezarPartida"
-        Me.btnEmpezarPartida.Size = New System.Drawing.Size(98, 37)
-        Me.btnEmpezarPartida.TabIndex = 1
-        Me.btnEmpezarPartida.Text = "Nueva Partida"
-        Me.btnEmpezarPartida.UseVisualStyleBackColor = True
+        Me.btnCrearPersonaje.Location = New System.Drawing.Point(257, 201)
+        Me.btnCrearPersonaje.Name = "btnCrearPersonaje"
+        Me.btnCrearPersonaje.Size = New System.Drawing.Size(98, 37)
+        Me.btnCrearPersonaje.TabIndex = 1
+        Me.btnCrearPersonaje.Text = "Crear Personaje"
+        Me.btnCrearPersonaje.UseVisualStyleBackColor = True
         '
-        'btnCargarPartida
+        'btnIniciarPartida
         '
-        Me.btnCargarPartida.Location = New System.Drawing.Point(257, 210)
-        Me.btnCargarPartida.Name = "btnCargarPartida"
-        Me.btnCargarPartida.Size = New System.Drawing.Size(98, 37)
-        Me.btnCargarPartida.TabIndex = 2
-        Me.btnCargarPartida.Text = "Cargar Partida"
-        Me.btnCargarPartida.UseVisualStyleBackColor = True
+        Me.btnIniciarPartida.Location = New System.Drawing.Point(134, 201)
+        Me.btnIniciarPartida.Name = "btnIniciarPartida"
+        Me.btnIniciarPartida.Size = New System.Drawing.Size(98, 37)
+        Me.btnIniciarPartida.TabIndex = 2
+        Me.btnIniciarPartida.Text = "Iniciar Partida"
+        Me.btnIniciarPartida.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -124,8 +124,8 @@ Partial Class Form_Menu
         Me.Controls.Add(Me.btnOpciones)
         Me.Controls.Add(Me.btnCreditos)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnCargarPartida)
-        Me.Controls.Add(Me.btnEmpezarPartida)
+        Me.Controls.Add(Me.btnIniciarPartida)
+        Me.Controls.Add(Me.btnCrearPersonaje)
         Me.Controls.Add(Me.LblTitulo)
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
@@ -138,8 +138,8 @@ Partial Class Form_Menu
     End Sub
 
     Friend WithEvents LblTitulo As Label
-    Friend WithEvents btnEmpezarPartida As Button
-    Friend WithEvents btnCargarPartida As Button
+    Friend WithEvents btnCrearPersonaje As Button
+    Friend WithEvents btnIniciarPartida As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents btnCreditos As Button
     Friend WithEvents btnOpciones As Button

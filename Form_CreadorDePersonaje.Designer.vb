@@ -30,6 +30,7 @@ Partial Class Form_CreadorDePersonaje
         Me.lblClase = New System.Windows.Forms.Label()
         Me.btnCrear = New System.Windows.Forms.Button()
         Me.txtNombreDelPersonaje = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.gboxGenero.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -98,7 +99,7 @@ Partial Class Form_CreadorDePersonaje
         '
         'btnCrear
         '
-        Me.btnCrear.Location = New System.Drawing.Point(76, 253)
+        Me.btnCrear.Location = New System.Drawing.Point(100, 289)
         Me.btnCrear.Name = "btnCrear"
         Me.btnCrear.Size = New System.Drawing.Size(116, 32)
         Me.btnCrear.TabIndex = 5
@@ -112,11 +113,21 @@ Partial Class Form_CreadorDePersonaje
         Me.txtNombreDelPersonaje.Size = New System.Drawing.Size(100, 20)
         Me.txtNombreDelPersonaje.TabIndex = 1
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(100, 224)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(116, 13)
+        Me.Label2.TabIndex = 6
+        Me.Label2.Text = "Informacion de la clase"
+        '
         'Form_CreadorDePersonaje
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(301, 297)
+        Me.ClientSize = New System.Drawing.Size(315, 350)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnCrear)
         Me.Controls.Add(Me.lblClase)
         Me.Controls.Add(Me.cmbxClase)
@@ -140,4 +151,5 @@ Partial Class Form_CreadorDePersonaje
     Friend WithEvents lblClase As Label
     Friend WithEvents btnCrear As Button
     Friend WithEvents txtNombreDelPersonaje As TextBox
+    Friend WithEvents Label2 As Label
 End Class
