@@ -11,7 +11,7 @@
         _nombre = nombre
         _genero = genero
         Fuerza = Random.Next(15, 21)
-        Vida = 40
+        Salud = 40
         Destreza = 8
         Defensa = 14
         Inteligencia = 8

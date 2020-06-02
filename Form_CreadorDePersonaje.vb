@@ -57,7 +57,7 @@
         If (Dialogo.ShowDialog() = DialogResult.OK) Then
 
             Dim Ruta As String = Dialogo.SelectedPath & "\\" & JUgador.Nombre & ".txt"
-            Dim Datos As String = (OutPutClase & "," & Jugador.Nombre & "," & Jugador.Genero.ToString & "," & Jugador.Vida & "," & Jugador.Defensa & "," & Jugador.Fuerza & "," & Jugador.Destreza & "," & Jugador.Inteligencia())
+            Dim Datos As String = (OutPutClase & "," & Jugador.Nombre & "," & Jugador.Genero.ToString & "," & Jugador.Fuerza & "," & Jugador.Salud & "," & Jugador.Destreza & "," & Jugador.Defensa & "," & Jugador.Inteligencia())
             GuardarDatos(Ruta, Datos)
 
             '    'OutPutNombre sera igual al nombre del archivo

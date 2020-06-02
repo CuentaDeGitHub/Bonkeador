@@ -113,10 +113,10 @@ Public MustInherit Class Entidad
     Public Sub New()
         Nombre = ""
         Fuerza = 0
-        Destreza = 0
-        Inteligencia = 0
-        Defensa = 0
         Vida = 0
+        Destreza = 0
+        Defensa = 0
+        Inteligencia = 0
 
     End Sub
 #End Region
