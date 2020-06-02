@@ -3,7 +3,9 @@
     Mujer
     Desconocido
 End Enum
+
 Public MustInherit Class Entidad
+    Protected Random As New Random
 #Region "Variables"
     Protected _nombre As String
     Protected _genero As EntidadGenero

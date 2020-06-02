@@ -16,6 +16,7 @@
             Dim FormCreador As New Form_CreadorDePersonaje
             FormCreador.Show()
         ElseIf DialogResult.Cancel Then
+
         End If
 
     End Sub
