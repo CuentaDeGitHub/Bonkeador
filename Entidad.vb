@@ -4,6 +4,13 @@
     Desconocido
 End Enum
 
+'Public Enum EntidadClase
+'    Bonkeador
+'    Mago
+'    Picaro
+'    Guerrero
+'End Enum
+
 Public MustInherit Class Entidad
     Protected Random As New Random
 #Region "Variables"

@@ -81,7 +81,7 @@ Partial Class Form_CreadorDePersonaje
         'cmbxClase
         '
         Me.cmbxClase.FormattingEnabled = True
-        Me.cmbxClase.Items.AddRange(New Object() {"Mago", "Picaro", "Bonkeador Experto", "Guerrero"})
+        Me.cmbxClase.Items.AddRange(New Object() {"Mago", "Picaro", "Bonkeador"})
         Me.cmbxClase.Location = New System.Drawing.Point(103, 153)
         Me.cmbxClase.Name = "cmbxClase"
         Me.cmbxClase.Size = New System.Drawing.Size(121, 21)

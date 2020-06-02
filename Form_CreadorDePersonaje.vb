@@ -34,8 +34,21 @@
         Else eGenero = EntidadGenero.Mujer
         End If
         Dim OutPutClase As String = cmbxClase.Text
-        Dim Maguito As New Mago(OutputNombre, eGenero)
-        MessageBox.Show(String.Format("{0} ha sido creado." & "{0} es un Mago {1}.", Maguito.Nombre, Maguito.Genero.ToString()))
+        Dim Jugador As New Jugador
+        Select Case OutPutClase
+
+            Case "Mago"
+                Dim Personaje As New Mago(OutputNombre, eGenero)
+                Jugador = Personaje
+            Case "Bonkeador"
+                Dim Personaje As New BonkeadorExperto(OutputNombre, eGenero)
+                Jugador = Personaje
+            Case "Picaro"
+                Dim Personaje As New Picaro(OutputNombre, eGenero)
+                Jugador = Personaje
+        End Select
+
+        MessageBox.Show(String.Format("{0} ha sido creado." & "{0} es un Mago {1}.", Jugador.Nombre, Jugador.Genero.ToString()))
         MessageBox.Show("Guarda tu personaje")
 
 
@@ -43,8 +56,8 @@
 
         If (Dialogo.ShowDialog() = DialogResult.OK) Then
 
-            Dim Ruta As String = Dialogo.SelectedPath & "\\" & Maguito.Nombre & ".txt"
-            Dim Datos As String = (OutPutClase & "," & Maguito.Nombre & "," & Maguito.Genero.ToString())
+            Dim Ruta As String = Dialogo.SelectedPath & "\\" & JUgador.Nombre & ".txt"
+            Dim Datos As String = (OutPutClase & "," & Jugador.Nombre & "," & Jugador.Genero.ToString & "," & Jugador.Vida & "," & Jugador.Defensa & "," & Jugador.Fuerza & "," & Jugador.Destreza & "," & Jugador.Inteligencia())
             GuardarDatos(Ruta, Datos)
 
             '    'OutPutNombre sera igual al nombre del archivo
@@ -53,6 +66,7 @@
             '    'Cerrar ventanita
         End If
 
+        Close()
 
 
     End Sub
