@@ -31,6 +31,8 @@ Partial Class Form_CreadorDePersonaje
         Me.btnCrear = New System.Windows.Forms.Button()
         Me.txtNombreDelPersonaje = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
         Me.gboxGenero.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -81,7 +83,7 @@ Partial Class Form_CreadorDePersonaje
         'cmbxClase
         '
         Me.cmbxClase.FormattingEnabled = True
-        Me.cmbxClase.Items.AddRange(New Object() {"Mago", "Picaro", "Bonkeador"})
+        Me.cmbxClase.Items.AddRange(New Object() {"Peleador", "Escurridizo", "Enclenque"})
         Me.cmbxClase.Location = New System.Drawing.Point(103, 153)
         Me.cmbxClase.Name = "cmbxClase"
         Me.cmbxClase.Size = New System.Drawing.Size(121, 21)
@@ -116,17 +118,37 @@ Partial Class Form_CreadorDePersonaje
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(100, 224)
+        Me.Label2.Location = New System.Drawing.Point(45, 210)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(116, 13)
+        Me.Label2.Size = New System.Drawing.Size(141, 13)
         Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Informacion de la clase"
+        Me.Label2.Text = "Peleador: Gran fuerza y vida"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(45, 234)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(219, 13)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Escurridizo : Gran destreza y fuerza promedio"
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(45, 257)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(131, 13)
+        Me.Label4.TabIndex = 8
+        Me.Label4.Text = "Enclenque: Inteligente....?"
         '
         'Form_CreadorDePersonaje
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(315, 350)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.btnCrear)
         Me.Controls.Add(Me.lblClase)
@@ -152,4 +174,6 @@ Partial Class Form_CreadorDePersonaje
     Friend WithEvents btnCrear As Button
     Friend WithEvents txtNombreDelPersonaje As TextBox
     Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Label4 As Label
 End Class

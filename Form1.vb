@@ -20,4 +20,13 @@
         End If
 
     End Sub
+
+    Private Sub btnSalir_Click(sender As Object, e As EventArgs) Handles btnSalir.Click
+        Close()
+    End Sub
+
+    Private Sub btnInformacion_Click(sender As Object, e As EventArgs) Handles btnInformacion.Click
+        Dim MuchoTexto As New Informacion
+        MuchoTexto.Show()
+    End Sub
 End Class

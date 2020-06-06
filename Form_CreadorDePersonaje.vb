@@ -26,29 +26,29 @@
             MessageBox.Show("Selecciona tu clase")
             Return
         End If
-        Dim eGenero As New EntidadGenero
+        Dim eGenero As String
         Dim OutputNombre As String = txtNombreDelPersonaje.Text
 
         If rbtnGeneroHombre.Checked Then
-            eGenero = EntidadGenero.Hombre
-        Else eGenero = EntidadGenero.Mujer
+            eGenero = "Hombre"
+        Else eGenero = "Mujer"
         End If
         Dim OutPutClase As String = cmbxClase.Text
-        Dim Jugador As New Jugador
+        Dim Jugador As Entidad
         Select Case OutPutClase
 
-            Case "Mago"
-                Dim Personaje As New Mago(OutputNombre, eGenero)
+            Case "Enclenque"
+                Dim Personaje As New BonkeadorExperto(OutputNombre, eGenero, 5, 15, 5, 20)
                 Jugador = Personaje
-            Case "Bonkeador"
-                Dim Personaje As New BonkeadorExperto(OutputNombre, eGenero)
+            Case "Peleador"
+                Dim Personaje As New BonkeadorExperto(OutputNombre, eGenero, 13, 30, 5, 5)
                 Jugador = Personaje
-            Case "Picaro"
-                Dim Personaje As New Picaro(OutputNombre, eGenero)
+            Case "Escurridizo"
+                Dim Personaje As New BonkeadorExperto(OutputNombre, eGenero, 10, 25, 15, 10)
                 Jugador = Personaje
         End Select
 
-        MessageBox.Show(String.Format("{0} ha sido creado." & "{0} es un Mago {1}.", Jugador.Nombre, Jugador.Genero.ToString()))
+        MessageBox.Show(String.Format("{0} sido creado." & " {0} es un " & cmbxClase.Text & " {1}.", Jugador.Nombre, Jugador.Genero.ToString()))
         MessageBox.Show("Guarda tu personaje")
 
 
@@ -56,14 +56,10 @@
 
         If (Dialogo.ShowDialog() = DialogResult.OK) Then
 
-            Dim Ruta As String = Dialogo.SelectedPath & "\\" & JUgador.Nombre & ".txt"
-            Dim Datos As String = (OutPutClase & "," & Jugador.Nombre & "," & Jugador.Genero.ToString & "," & Jugador.Fuerza & "," & Jugador.Salud & "," & Jugador.Destreza & "," & Jugador.Defensa & "," & Jugador.Inteligencia())
+            Dim Ruta As String = Dialogo.SelectedPath & "\\" & Jugador.Nombre & ".txt"
+            Dim Datos As String = (OutPutClase & "," & Jugador.Nombre & "," & Jugador.Genero & "," & Jugador.Fuerza & "," & Jugador.Salud & "," & Jugador.Destreza & "," & Jugador.Inteligencia())
             GuardarDatos(Ruta, Datos)
-
-            '    'OutPutNombre sera igual al nombre del archivo
-            '    'Introducir todos los atributos del personaje al archivo
-            '    'Usar Destructor
-            '    'Cerrar ventanita
+            '    
         End If
 
         Close()
