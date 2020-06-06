@@ -35,6 +35,17 @@ Public Class Principal
         MessageBox.Show("Avanzas rapidamente y sin ningun cuidado por la ciudad para escapar")
         Dim IntEncuentro As Integer = R.Next(0, 7)
         ProgresoFaltante -= 10
+        If (ProgresoFaltante <= 0) Then
+            MessageBox.Show("Has escapado de la ciudad")
+            Me.Close()
+        End If
+        TiempoRestante -= 10
+        If (TiempoRestante < 0) Then
+            PictureBox1.Image = My.Resources.RataSeñalando
+            MessageBox.Show("No has logrado escapar a tiempo de la ciudad, las ratas te bonkean")
+            Me.Close()
+        End If
+
         Try
             prgbarEscape.Value = prgbarEscape.Value + 10
         Catch ex As Exception
@@ -54,8 +65,10 @@ Public Class Principal
                         gboxCombate.Visible = True
                     End If
                 ElseIf (DialogResult.No) Then
-                    gboxCombate.Visible = True
+                    MessageBox.Show("Decides rodear, perdiendo asi mas tiempo")
+                    TiempoRestante -= 10
                     gboxPrincipal.Visible = False
+                    gboxCombate.Visible = True
                 End If
             Case 20
                 If (MessageBox.Show("Hay una rata durmiendo en el camino, desea rodearla e impedir la pelea?", "Evento", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes) Then
@@ -63,19 +76,26 @@ Public Class Principal
                         MessageBox.Show("Logras rodear a la rata de manera sigilosa sin despertarla")
                     ElseIf (Jugador.Destreza < 10) Then
                         MessageBox.Show("Debido a tu falta de sigilo terminas despertando a la rata")
+                        PictureBox1.Image = My.Resources.RataSeñalando
                         gboxPrincipal.Visible = False
                         gboxCombate.Visible = True
                     End If
+                ElseIf (DialogResult.No) Then
+                    PictureBox1.Image = My.Resources.RataSeñalando
+                    gboxPrincipal.Visible = False
+                    gboxCombate.Visible = True
+
                 End If
-            Case 0
+            Case 10
                 MessageBox.Show("La rata mas inteligente que has visto esta en tu camino, no puedes evitar esta pelea")
+                PictureBox1.Image = My.Resources.BonkProof
                 gboxPrincipal.Visible = False
                 gboxCombate.Visible = True
             Case Else
                 If (IntEncuentro <= 3) Then
 
                     MessageBox.Show("Una rata te impide tu progreso")
-
+                    PictureBox1.Image = My.Resources.Rata
                     gboxCombate.Visible = True
                     gboxPrincipal.Visible = False
                 Else
@@ -89,6 +109,17 @@ Public Class Principal
         MessageBox.Show("Te mueves lenta y sigiolosamente por la ciudad para intentar escapar")
         Dim IntEncuentro As Integer = R.Next(0, 11)
         ProgresoFaltante -= 10
+        If (ProgresoFaltante <= 0) Then
+            MessageBox.Show("Has escapado de la ciudad")
+            Me.Close()
+        End If
+        TiempoRestante -= 20
+        If (TiempoRestante < 0) Then
+            PictureBox1.Image = My.Resources.RataSeñalando
+            MessageBox.Show("No has logrado escapar a tiempo de la ciudad, las ratas te bonkean")
+            Me.Close()
+        End If
+
         Try
             prgbarEscape.Value = prgbarEscape.Value + 10
         Catch ex As Exception
@@ -107,6 +138,11 @@ Public Class Principal
                         gboxPrincipal.Visible = False
                         gboxCombate.Visible = True
                     End If
+                ElseIf (DialogResult.No) Then
+                    MessageBox.Show("Decides rodear, perdiendo asi mas tiempo")
+                    TiempoRestante -= 10
+                    gboxPrincipal.Visible = False
+                    gboxCombate.Visible = True
 
                 End If
             Case 20
@@ -115,19 +151,25 @@ Public Class Principal
                         MessageBox.Show("Logras rodear a la rata de manera sigilosa sin despertarla")
                     ElseIf (Jugador.Destreza < 10) Then
                         MessageBox.Show("Debido a tu falta de sigilo terminas despertando a la rata")
+                        PictureBox1.Image = My.Resources.Rata
                         gboxPrincipal.Visible = False
                         gboxCombate.Visible = True
                     End If
+                ElseIf (DialogResult.No) Then
+                    PictureBox1.Image = My.Resources.RataSeñalando
+                    gboxPrincipal.Visible = False
+                    gboxCombate.Visible = True
                 End If
-            Case 0
+            Case 10
                 MessageBox.Show("La rata mas inteligente que has visto esta en tu camino, no puedes evitar esta pelea")
+                PictureBox1.Image = My.Resources.BonkProof
                 gboxPrincipal.Visible = False
                 gboxCombate.Visible = True
             Case Else
                 If (IntEncuentro <= 3) Then
 
                     MessageBox.Show("Una rata te impide tu progreso")
-
+                    PictureBox1.Image = My.Resources.Rata
                     gboxCombate.Visible = True
                     gboxPrincipal.Visible = False
                 Else
@@ -144,6 +186,7 @@ Public Class Principal
         TiempoRestante -= 10
         If (TiempoRestante <= 0) Then
             MessageBox.Show("No has logrado escapar a tiempo de la ciudad, las ratas te bonkean")
+            PictureBox1.Image = My.Resources.RatBonk
             Me.Close()
         End If
         lblVida.Text = Jugador.Salud
@@ -167,16 +210,9 @@ Public Class Principal
             gboxPrincipal.Visible = True
         ElseIf (Jugador.Salud <= 0) Then
             MessageBox.Show("Fuiste derrotado por la rata. Bonk")
+            PictureBox1.Image = My.Resources.RatBonk
             Me.Close()
         End If
-        If (ProgresoFaltante <= 0) Then
-            MessageBox.Show("Has escapado de la ciudad")
-            Me.Close()
-        End If
-        TiempoRestante -= 20
-        If (TiempoRestante < 0) Then
-            MessageBox.Show("No has logrado escapar a tiempo de la ciudad, las ratas te bonkean")
-            Me.Close()
-        End If
+        PictureBox1.Image = My.Resources.Ciudad
     End Sub
 End Class
