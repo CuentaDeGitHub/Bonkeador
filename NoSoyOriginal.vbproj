@@ -89,12 +89,6 @@
     <Compile Include="Form_CreadorDePersonaje.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form_Opciones.Designer.vb">
-      <DependentUpon>Form_Opciones.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Form_Opciones.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Informacion.Designer.vb">
       <DependentUpon>Informacion.vb</DependentUpon>
     </Compile>
@@ -132,9 +126,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form_CreadorDePersonaje.resx">
       <DependentUpon>Form_CreadorDePersonaje.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Form_Opciones.resx">
-      <DependentUpon>Form_Opciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Informacion.resx">
       <DependentUpon>Informacion.vb</DependentUpon>

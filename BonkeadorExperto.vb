@@ -28,7 +28,5 @@
         Return Fuerza - 5
     End Function
 
-    Public Overrides Function MoverseSigilosamente() As Integer
-        Return Random.Next(Inteligencia, Destreza)
-    End Function
+
 End Class

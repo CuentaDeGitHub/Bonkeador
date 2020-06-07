@@ -11,7 +11,7 @@
         End Set
     End Property
     Public Function Atacar() As Integer Implements IRata.Atacar
-        'La rata te ataca
+        '
         Return Random.Next(4, 6)
     End Function
 

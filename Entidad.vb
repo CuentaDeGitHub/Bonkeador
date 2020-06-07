@@ -90,7 +90,7 @@ Public MustInherit Class Entidad
 
 #Region "Metodos"
     Public MustOverride Function Atacar() As Integer
-    Public MustOverride Function MoverseSigilosamente() As Integer
+
 #End Region
 
 #Region "Constructores"
